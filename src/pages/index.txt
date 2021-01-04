@@ -1,4 +1,4 @@
 <h1>技術書典10のレポジトリテスト</h1>
 <p>これはテストです</p>
 <p><a href="/page.html">ページへ</a></p>
-<p><a href="/sub/index.html>サブディレクトリトップへ</a></p>
+<p><a href="/sub/index.html">サブディレクトリトップへ</a></p>
