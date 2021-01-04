@@ -1,0 +1,4 @@
+output,source,title
+index.html,index.txt,トップページ
+page.html,page.txt,サブページ
+sub/index.html,sub/index.txt,サブディレクトリページ
