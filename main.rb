@@ -8,17 +8,17 @@ require 'fileutils'
 class TemplateOutput
   def initialize(template='default.html.erb')
     tmpl_file = File.join('src/templates', template)
-    File.open(tmpl_file, 'r') do |file|
+    File.open(tmpl_file, 'r', encoding: 'UTF-8') do |file|
       @template = ERB.new(file.read, trim_mode: '-')
     end
     @template.filename = tmpl_file
   end
   def output(input, output, title)
     @title = title
-    File.open(input, 'r') do |file|
+    File.open(input, 'r', encoding: 'UTF-8') do |file|
       @content = file.read
     end
-    File.open(output, 'w') do |file|
+    File.open(output, 'w', encoding: 'UTF-8') do |file|
       file.write @template.result(binding)
     end
   end
