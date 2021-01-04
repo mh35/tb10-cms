@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      ruby: 2.7
+  build:
+    commands: ruby main.rb
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dst
