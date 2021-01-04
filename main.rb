@@ -26,7 +26,8 @@ end
 
 FileUtils.cp_r('src/assets', 'dst/assets')
 FileUtils.rm('dst/.keep')
-CSV.open('src/pages/pages.csv', 'r', headers: true) do |csv|
+CSV.open('src/pages/pages.csv', 'r', headers: true,
+  encoding: 'UTF-8') do |csv|
   csv.each do |row|
     dname = File.dirname(row['output'])
     fname = File.basename(row['output'])
